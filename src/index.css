@@ -39,14 +39,14 @@ html.day-mode {
 }
 
 html.night-mode {
-  --bg-color: #080808;
-  --text-color: #dfe7e0;
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
 }
 
 /* Apply variables */
 html {
-  --bg-color: #080808;
-  --text-color: #dfe7e0;
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
 }
 
 body {
