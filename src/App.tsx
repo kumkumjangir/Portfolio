@@ -5,15 +5,11 @@ export default function App() {
   const [isDayMode, setIsDayMode] = useState(true);
 
   useEffect(() => {
-    // Check for saved preference or system preference
-    const savedMode = localStorage.getItem('color-mode');
-    if (savedMode) {
-      setIsDayMode(savedMode === 'day');
-    } else {
-      // Check system preference
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setIsDayMode(!prefersDark);
-    }
+    // Always set day mode as default, override any saved preference
+    setIsDayMode(true);
+    localStorage.removeItem('color-mode');
+    document.documentElement.classList.add('day-mode');
+    document.documentElement.classList.remove('night-mode');
   }, []);
 
   useEffect(() => {
