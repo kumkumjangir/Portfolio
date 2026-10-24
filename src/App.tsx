@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Scene } from "./Scene";
 
 export default function App() {
-  const [isDayMode, setIsDayMode] = useState(false);
+  const [isDayMode, setIsDayMode] = useState(true);
 
   useEffect(() => {
     // Check for saved preference or system preference
